@@ -1,14 +1,14 @@
-import styles from "./Login.module.css";
-
 import { useEffect, useState } from "react";
-// import { useAuthentication } from "../../hooks/useAuthentication";
+import { useAuthentication } from "../../hooks/useAuthentication";
+
+import styles from "./Login.module.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // const { login, error: authError, loading } = useAuthentication();
+  const { login, error: authError, loading } = useAuthentication();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,17 +20,17 @@ export default function Login() {
       password,
     };
 
-    // const res = await login(user);
+    const res = await login(user);
 
-    // console.log(res);
+    console.log('RESPOSTA',res);
   };
 
-  // useEffect(() => {
-  //   console.log(authError);
-  //   if (authError) {
-  //     setError(authError);
-  //   }
-  // }, [authError]);
+  useEffect(() => {
+    console.log(authError);
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
 
   return (
     <div className={styles.login}>
@@ -59,12 +59,12 @@ export default function Login() {
             value={password}
           />
         </label>
-        {/* {!loading && <button className="btn">Entrar</button>}
+        {!loading && <button className="btn">Entrar</button>}
         {loading && (
           <button className="btn" disabled>
             Aguarde...
           </button>
-        )} */}
+        )}
         {error && <p className="error">{error}</p>}
       </form>
     </div>
