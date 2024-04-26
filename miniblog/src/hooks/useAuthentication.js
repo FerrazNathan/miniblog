@@ -80,9 +80,8 @@ export const useAuthentication = () => {
       setLoading(false);
 
     } catch (error) {
-      console.log(error.message);
-      console.log(typeof error.message);
-      console.log(error.message.includes("user-not"));
+      console.error(error);
+
 
       let systemErrorMessage;
 
@@ -90,11 +89,14 @@ export const useAuthentication = () => {
         systemErrorMessage = "Usuário não encontrado.";
       } else if (error.message.includes("wrong-password")) {
         systemErrorMessage = "Senha incorreta.";
-      } else {
-        systemErrorMessage = "Ocorreu um erro, por favor tenta mais tarde.";
+      } else if (error.message.includes("invalid-credential")) {
+        systemErrorMessage = "Email ou senha incorretos";
+      }else {
+        systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde.";
       }
 
       setError(systemErrorMessage);
+      setLoading(false);
     }
 
     console.log(error);
