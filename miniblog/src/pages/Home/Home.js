@@ -19,7 +19,7 @@ export default function Home() {
       return navigate(`/search?q=${query}`);
     }
   };
-console.log(posts, 'post na home')
+  
   return (
     <div className={styles.home}>
       <h1>Veja os nossos posts mais recentes</h1>
@@ -41,7 +41,7 @@ console.log(posts, 'post na home')
             </Link>
           </div>
         )}
-        {posts && posts.map((post) => <PostDetail key={post.id} post={posts} />)}
+        {posts && <PostDetail posts={posts} />}
       </div>
     </div>
   );

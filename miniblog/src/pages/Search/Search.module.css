@@ -1,0 +1,27 @@
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchContainer h2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.searchContainer p {
+  margin-bottom: 2rem;
+}
+
+.searchContainer aside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchContainer aside a {
+  width: 60%;
+}
