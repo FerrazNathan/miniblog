@@ -4,6 +4,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
+import Post from './pages/Post/Post';
 import About from './pages/About/About';
 import Login from './pages/Login/Login';
 import Search from './pages/Search/Search';
@@ -41,9 +42,14 @@ function App() {
           <Navbar />
           <div className="container">
             <Routes>
+            
+              {/* Public routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/search" element={<Search />} />
+              <Route path="/posts/:id" element={<Post />} />
+
+              {/* Protected routes */}
               <Route
                 path="/posts/create"
                 element={user ? <CreatePost /> : <Navigate to="/login" />}

@@ -1,0 +1,30 @@
+.containerPost {
+  text-align: center;
+}
+
+.containerPost img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.containerPost h3 {
+  margin-bottom: 0.2rem;
+}
+
+.containerContent {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.containerTags {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+} 
+
+.containerTags span {
+  font-weight: 700;
+}
