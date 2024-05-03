@@ -106,13 +106,13 @@ export default function Navbar (){
       <h3>Deseja realmente sair?</h3>
       <div className={styles.containerButtons}>
         <button 
-          className={styles.cancelButton}
+          className="btn btn-primary"
           onClick={closeModal}
         >
           Cancelar
         </button>
         <button 
-          className={styles.logoutButton}
+          className="btn btn-outline btn-danger"
           onClick={() => {
             logout();
             closeModal();

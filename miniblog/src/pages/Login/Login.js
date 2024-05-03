@@ -59,9 +59,9 @@ export default function Login() {
             value={password}
           />
         </label>
-        {!loading && <button className="btn">Entrar</button>}
+        {!loading && <button className="btn btn-primary">Entrar</button>}
         {loading && (
-          <button className="btn" disabled>
+          <button className="bbtn btn-primarytn" disabled>
             Aguarde...
           </button>
         )}

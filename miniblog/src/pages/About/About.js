@@ -12,7 +12,7 @@ export default function About() {
         Este projeto consiste em um blog feito com React no front-end e Firebase
         no back-end.
       </p>
-      <Link to="/posts/create" className="btn">
+      <Link to="/posts/create" className="btn btn-primary">
         Criar post
       </Link>
     </div>

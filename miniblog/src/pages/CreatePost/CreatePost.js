@@ -97,9 +97,9 @@ export default function CreatePost() {
             value={tags}
           />
         </label>
-        {!response.loading && <button className="btn">Criar post!</button>}
+        {!response.loading && <button className="btn btn-primary">Criar post!</button>}
         {response.loading && (
-          <button className="btn" disabled>
+          <button className="btn btn-primary" disabled>
             Aguarde.. .
           </button>
         )}
