@@ -89,9 +89,9 @@ console.log(loading, 'LOADING')
             value={confirmPassword}
           />
         </label>
-        {!loading && <button className="btn">Cadastrar</button>}
+        {!loading && <button className="btn btn-primary">Cadastrar</button>}
         {loading && (
-          <button className="btn" disabled>
+          <button className="btn btn-primary" disabled>
             Aguarde...
           </button>
         )}

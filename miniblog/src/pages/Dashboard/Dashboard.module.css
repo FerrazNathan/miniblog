@@ -7,13 +7,13 @@
 }
 
 .dashboard h2 {
-  font-size: 2.2em;
-  margin-bottom: 0.5em;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .dashboard p {
-  color: #aaa;
-  margin-bottom: 1em;
+  color: #AAA;
+  margin-bottom: 1rem;
 }
 
 .noposts {
@@ -21,7 +21,7 @@
 }
 
 .noposts p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 .noposts a {
@@ -32,7 +32,7 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #CCC;
   width: 80%;
   padding: 10px;
 }
@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #EEE;
   width: 80%;
   padding: 10px;
 }
@@ -55,5 +55,12 @@
   margin: 0 5px;
   height: 30px;
   width: 100px;
-  font-size: 0.7em;
+  font-size: 0.7rem;
+}
+
+.containerButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
