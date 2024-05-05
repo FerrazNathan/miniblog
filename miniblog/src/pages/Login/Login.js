@@ -21,12 +21,9 @@ export default function Login() {
     };
 
     const res = await login(user);
-
-    console.log('RESPOSTA',res);
   };
 
   useEffect(() => {
-    console.log(authError);
     if (authError) {
       setError(authError);
     }

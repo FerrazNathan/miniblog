@@ -11,7 +11,6 @@ export default function Register() {
   const [error, setError] = useState("");
 
   const { createUser, error: authError, loading } = useAuthentication();
-console.log(loading, 'LOADING')
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -29,9 +28,6 @@ console.log(loading, 'LOADING')
     }
 
     const res = await createUser(user);
-
-    console.log(res, 'RES');
-    console.log(user, 'user');
   };
 
   useEffect(() => {
