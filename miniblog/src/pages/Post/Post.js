@@ -7,7 +7,7 @@ import styles from './Post.module.css'
 export default function Post() {
   const { id } = useParams()
   const { document: post, loading } = useFetchDocument('posts', id)
-console.log(post, 'post');
+  
   return (
     <div className={styles.containerPost}>
       {loading && <p>Loading...</p>}
